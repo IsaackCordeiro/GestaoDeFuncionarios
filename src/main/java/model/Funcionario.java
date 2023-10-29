@@ -9,5 +9,8 @@ package model;
  * @author isaac
  */
 public class Funcionario {
+    private String nome ;
+    private String cargo;
+    
     
 }
