@@ -9,5 +9,7 @@ package presenter;
  * @author isaac
  */
 public class FuncionarioPresenter {
-    
+    public void iniciaTelaConsulta(){
+        
+    }
 }

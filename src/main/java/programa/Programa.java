@@ -4,12 +4,14 @@
  */
 package programa;
 
+import presenter.PrincipalPresenter;
+
 /**
  *
  * @author isaac
  */
 public class Programa {
     public static void main(String[] args) {
-        
+        PrincipalPresenter principalPresenter = new PrincipalPresenter();
     }
 }

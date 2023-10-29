@@ -4,10 +4,31 @@
  */
 package presenter;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import view.PrincipalView;
+
 /**
  *
  * @author isaac
  */
 public class PrincipalPresenter {
+    private PrincipalView view;
     
+    public PrincipalPresenter(){
+        this.view = new PrincipalView();
+        view.setVisible(true);
+        
+        configuraTela();
+    }
+    
+    public void configuraTela(){
+        view.getBtnConsultar().addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+//                ConsultarPresenter consultarPresenter = new ConsultarPresenter();
+//                consultarPresenter.iniciarTela();
+            }
+        });
+    }
 }
