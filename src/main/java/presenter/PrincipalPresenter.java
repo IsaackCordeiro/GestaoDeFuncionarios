@@ -27,6 +27,7 @@ public class PrincipalPresenter {
             @Override
             public void actionPerformed(ActionEvent e){
                 ConsultarFuncionarioPresenter consultarFuncionarioPresenter = new ConsultarFuncionarioPresenter();
+                consultarFuncionarioPresenter.iniciarComponente();
             }
         });
     }

@@ -5,15 +5,21 @@
 package presenter;
 
 import javax.swing.*;
+import view.ConsultarFuncionarioView;
+import view.PrincipalView;
 
 /**
  *
  * @author isaac
  */
 public class ConsultarFuncionarioPresenter extends JFrame{
+     private ConsultarFuncionarioView view;
     public ConsultarFuncionarioPresenter(){
-        initComponents();
+        iniciarComponente();
+    }
+    public void iniciarComponente(){
+    this.view = new ConsultarFuncionarioView();
+        view.setVisible(true);
     }
     
-    public void initComponents(){}
 }

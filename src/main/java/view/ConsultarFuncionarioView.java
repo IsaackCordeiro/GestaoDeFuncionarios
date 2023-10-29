@@ -11,7 +11,8 @@ import javax.swing.JFrame;
  * @author isaac
  */
 public class ConsultarFuncionarioView extends JFrame{
-      private javax.swing.JButton btnBuscar;
+    
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnNovo;
     private javax.swing.JButton btnVisualizar;
