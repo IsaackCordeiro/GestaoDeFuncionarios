@@ -4,16 +4,30 @@
  */
 package presenter;
 
-import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import view.ConsultarFuncionarioView;
 
 /**
  *
  * @author isaac
  */
-public class ConsultarFuncionarioPresenter extends JFrame{
+public class ConsultarFuncionarioPresenter {
+    private ConsultarFuncionarioView view;
+    
     public ConsultarFuncionarioPresenter(){
-        initComponents();
+        this.view = new ConsultarFuncionarioView();
+        view.setVisible(true);
+        
+        configuraTela();
     }
     
-    public void initComponents(){}
+    public void configuraTela(){
+        view.getBtnFechar().addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                view.dispose();
+            }
+        });
+    }
 }

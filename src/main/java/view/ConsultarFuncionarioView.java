@@ -4,14 +4,17 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JTextField;
 
 /**
  *
  * @author isaac
  */
 public class ConsultarFuncionarioView extends JFrame{
-      private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnNovo;
     private javax.swing.JButton btnVisualizar;
@@ -47,13 +50,10 @@ public class ConsultarFuncionarioView extends JFrame{
 
         tbResultadoPesquisa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Nome", "Cargo", "Salario Base"
+                "Nome", "Cargo", "Salário Base"
             }
         ) {
             Class[] types = new Class [] {
@@ -64,6 +64,9 @@ public class ConsultarFuncionarioView extends JFrame{
                 return types [columnIndex];
             }
         });
+        tbResultadoPesquisa.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tbResultadoPesquisa.getTableHeader().setResizingAllowed(false);
+        tbResultadoPesquisa.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tbResultadoPesquisa);
 
         btnNovo.setText("Novo");
@@ -87,7 +90,7 @@ public class ConsultarFuncionarioView extends JFrame{
                                 .addComponent(cbbParametroPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtAtributoPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnBuscar)))
                         .addGap(20, 20, 20))
                     .addGroup(layout.createSequentialGroup()
@@ -96,7 +99,7 @@ public class ConsultarFuncionarioView extends JFrame{
                         .addComponent(btnVisualizar)
                         .addGap(18, 18, 18)
                         .addComponent(btnFechar)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(128, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,8 +123,29 @@ public class ConsultarFuncionarioView extends JFrame{
     }// </editor-fold>                        
 // </editor-fold>                        
 
+    public JButton getBtnBuscar() {
+        return btnBuscar;
+    }
 
-   
+    public JButton getBtnFechar() {
+        return btnFechar;
+    }
+
+    public JButton getBtnNovo() {
+        return btnNovo;
+    }
+
+    public JButton getBtnVisualizar() {
+        return btnVisualizar;
+    }
+
+    public JComboBox<String> getCbbParametroPesquisa() {
+        return cbbParametroPesquisa;
+    }
+
+    public JTextField getTxtAtributoPesquisa() {
+        return txtAtributoPesquisa;
+    }
     
-
+    
 }
