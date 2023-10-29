@@ -9,7 +9,7 @@ package model;
  * @author dougl
  */
 public class test {
-    public static void main(String[] args) {
+    public static void test(String[] args) {
         System.out.println("Testando");
         //
         Funcionario f1 = new Funcionario("douglas","estágiario",2000);
