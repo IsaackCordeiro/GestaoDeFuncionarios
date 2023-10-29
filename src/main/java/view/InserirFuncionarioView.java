@@ -4,10 +4,16 @@
  */
 package view;
 
+import javax.swing.*;
+
 /**
  *
  * @author isaac
  */
-public class InserirFuncionarioView {
+public class InserirFuncionarioView extends JFrame{
+    public InserirFuncionarioView(){
+        initComponents();
+    }
     
+    public void initComponents(){}
 }

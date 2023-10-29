@@ -10,8 +10,8 @@ import javax.swing.*;
  *
  * @author isaac
  */
-public class ConsultarFuncionarioView extends JFrame{
-    public ConsultarFuncionarioView(){
+public class ConsultarFuncionarioPresenter extends JFrame{
+    public ConsultarFuncionarioPresenter(){
         initComponents();
     }
     

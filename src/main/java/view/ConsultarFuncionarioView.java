@@ -4,10 +4,16 @@
  */
 package view;
 
+import javax.swing.*;
+
 /**
  *
  * @author isaac
  */
-public class ConsultarFuncionarioView {
+public class ConsultarFuncionarioView extends JFrame{
+    public ConsultarFuncionarioView(){
+        initComponents();
+    }
     
+    public void initComponents(){}
 }

@@ -26,8 +26,7 @@ public class PrincipalPresenter {
         view.getBtnConsultar().addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-//                ConsultarPresenter consultarPresenter = new ConsultarPresenter();
-//                consultarPresenter.iniciarTela();
+                ConsultarFuncionarioPresenter consultarFuncionarioPresenter = new ConsultarFuncionarioPresenter();
             }
         });
     }
