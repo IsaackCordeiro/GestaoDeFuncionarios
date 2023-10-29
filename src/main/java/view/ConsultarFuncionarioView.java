@@ -22,12 +22,21 @@ public class ConsultarFuncionarioView extends JFrame{
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tbResultadoPesquisa;
     private javax.swing.JTextField txtAtributoPesquisa;
+    
+    private static ConsultarFuncionarioView instance;
+    
 
-    public ConsultarFuncionarioView() {
+    private ConsultarFuncionarioView() {
         initComponents();
     }
     
-     
+    public static ConsultarFuncionarioView getInstance() {
+        if (instance == null) {
+            instance = new ConsultarFuncionarioView();
+        }
+        return instance;
+    }
+    
     
        @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
