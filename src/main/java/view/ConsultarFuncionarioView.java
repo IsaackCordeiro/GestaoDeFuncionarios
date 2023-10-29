@@ -129,6 +129,7 @@ public class ConsultarFuncionarioView extends JFrame{
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>                        
 // </editor-fold>                        
 

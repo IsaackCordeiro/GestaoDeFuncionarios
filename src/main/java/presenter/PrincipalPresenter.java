@@ -30,11 +30,17 @@ public class PrincipalPresenter {
             }
         });
     
-    
-     view.getBtnIncluir().addActionListener(new ActionListener(){
+        view.getBtnIncluir().addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                InserirFuncionarioPresenter  InserirFuncionarioPresenter  = new InserirFuncionarioPresenter();
+                InserirFuncionarioPresenter inserirFuncionarioPresenter  = new InserirFuncionarioPresenter();
+            }
+        });
+        
+        view.getBtnVisualizar().addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                ListarFuncionarioPresenter listarFuncionarioPresenter  = new ListarFuncionarioPresenter();
             }
         });
     }

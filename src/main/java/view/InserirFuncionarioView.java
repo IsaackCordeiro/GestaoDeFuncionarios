@@ -56,7 +56,7 @@ public class InserirFuncionarioView extends JFrame{
         initComponents();
     }
     
-       private void initComponents() {
+    private void initComponents() {
 
         txtNome = new javax.swing.JTextField();
         txtCargo = new javax.swing.JTextField();
@@ -130,5 +130,6 @@ public class InserirFuncionarioView extends JFrame{
         );
 
         pack();
+        setLocationRelativeTo(null);
     }
 }
