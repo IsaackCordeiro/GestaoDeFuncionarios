@@ -18,7 +18,6 @@ public class ConsultarFuncionarioPresenter {
     public ConsultarFuncionarioPresenter(){
         this.view = ConsultarFuncionarioView.getInstance();
         view.setVisible(true);
-        
         configuraTela();
     }
     

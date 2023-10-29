@@ -29,5 +29,14 @@ public class PrincipalPresenter {
                 ConsultarFuncionarioPresenter consultarFuncionarioPresenter = new ConsultarFuncionarioPresenter();
             }
         });
+    
+    
+     view.getBtnIncluir().addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                InserirFuncionarioPresenter  InserirFuncionarioPresenter  = new InserirFuncionarioPresenter();
+            }
+        });
     }
+      
 }

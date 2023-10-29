@@ -4,10 +4,29 @@
  */
 package presenter;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import view.InserirFuncionarioView;
+
 /**
  *
  * @author isaac
  */
 public class InserirFuncionarioPresenter{
-
+    private InserirFuncionarioView view ;
+    public InserirFuncionarioPresenter(){
+        this.view = InserirFuncionarioView.getInstace();
+        view.setVisible(true);
+        configuraTela();
+    }
+    
+    public void configuraTela(){
+        
+        view.getBtnCancelar().addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                view.dispose();
+            }
+        });
+    }
 }

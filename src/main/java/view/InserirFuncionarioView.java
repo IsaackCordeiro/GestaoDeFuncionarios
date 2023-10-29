@@ -20,8 +20,39 @@ public class InserirFuncionarioView extends JFrame{
     private javax.swing.JTextField txtCargo;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtSalarioBase;
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public JButton getBtnSalvar() {
+        return btnSalvar;
+    }
+
+    public JTextField getTxtCargo() {
+        return txtCargo;
+    }
+
+    public JTextField getTxtNome() {
+        return txtNome;
+    }
+
+    public JTextField getTxtSalarioBase() {
+        return txtSalarioBase;
+    }
     
-    public InserirFuncionarioView(){
+    private static InserirFuncionarioView instance;
+    
+    public static InserirFuncionarioView getInstace(){
+        if(instance == null){
+            instance = new InserirFuncionarioView();
+        }
+        return instance;
+    
+    }
+    
+    
+    private InserirFuncionarioView(){
         initComponents();
     }
     
