@@ -4,16 +4,10 @@
  */
 package presenter;
 
-import javax.swing.*;
-
 /**
  *
  * @author isaac
  */
-public class InserirFuncionarioPresenter extends JFrame{
-    public InserirFuncionarioPresenter(){
-        initComponents();
-    }
-    
-    public void initComponents(){}
+public class InserirFuncionarioPresenter{
+
 }

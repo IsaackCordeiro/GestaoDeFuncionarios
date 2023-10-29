@@ -4,16 +4,10 @@
  */
 package presenter;
 
-import javax.swing.*;
-
 /**
  *
  * @author isaac
  */
-public class ListarFuncionarioPresenter extends JFrame {
-    public ListarFuncionarioPresenter(){
-        initComponents();
-    }
-    
-    public void initComponents(){}
+public class ListarFuncionarioPresenter{
+
 }

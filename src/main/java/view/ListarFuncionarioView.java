@@ -4,10 +4,16 @@
  */
 package view;
 
+import javax.swing.*;
+
 /**
  *
  * @author isaac
  */
-public class ListarFuncionarioView {
+public class ListarFuncionarioView extends JFrame{
+    public ListarFuncionarioView(){
+        initComponents();
+    }
     
+    public void initComponents(){}
 }
