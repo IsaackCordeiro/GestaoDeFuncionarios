@@ -4,12 +4,16 @@
  */
 package presenter;
 
+import javax.swing.*;
+
 /**
  *
  * @author isaac
  */
-public class FuncionarioPresenter {
-    public void iniciaTelaConsulta(){
-        
+public class InserirFuncionarioPresenter extends JFrame{
+    public InserirFuncionarioPresenter(){
+        initComponents();
     }
+    
+    public void initComponents(){}
 }
