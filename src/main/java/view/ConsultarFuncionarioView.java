@@ -52,7 +52,7 @@ public class ConsultarFuncionarioView extends JFrame{
         btnFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
+        setTitle("Consultar de Funcionário");
         cbbParametroPesquisa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nome", "Cargo", "Salario Base" }));
 
         btnBuscar.setText("Buscar");

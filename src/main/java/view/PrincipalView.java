@@ -29,7 +29,7 @@ public class PrincipalView extends JFrame{
         btnConsultar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
+        setTitle("Tela Principal");
         btnVisualizar.setText("Visualizar");
         btnVisualizar.setMaximumSize(new java.awt.Dimension(89, 27));
         btnVisualizar.setPreferredSize(new java.awt.Dimension(89, 27));
