@@ -51,7 +51,7 @@ public class ConsultarFuncionarioView extends JFrame{
         btnVisualizar = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Consultar de Funcionário");
         cbbParametroPesquisa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nome", "Cargo", "Salario Base" }));
 

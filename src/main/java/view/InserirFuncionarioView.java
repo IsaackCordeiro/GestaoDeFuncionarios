@@ -67,7 +67,7 @@ public class InserirFuncionarioView extends JFrame{
         lbCargo = new javax.swing.JLabel();
         lbSalario = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Inserir de Funcionário");
         btnSalvar.setText("Salvar");
 
