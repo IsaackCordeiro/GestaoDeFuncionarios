@@ -13,7 +13,7 @@ import view.ConsultarFuncionarioView;
 
 /**
  *
- * @author isaac
+ * @author isaack e Douglas
  */
 public class ConsultarFuncionarioPresenter {
 
@@ -28,17 +28,17 @@ public class ConsultarFuncionarioPresenter {
 
     public void listarFuncionarios() {
         colaborabores = FuncionarioCollection.getInstance();
+        String atributo = view.getTxtAtributoPesquisa().getText();
         DefaultTableModel tableModel = (DefaultTableModel) view.getTbResultadoPesquisa().getModel();
 
-        System.out.println("incio" + tableModel.getRowCount());
-        if (tableModel.getRowCount() > 0) {
-            for (int i = 0; i < tableModel.getRowCount(); i++) {
+        
+         if (tableModel.getRowCount() > 0) {
+            while ( tableModel.getRowCount() != 0) {
                 tableModel.removeRow(0);
-                System.out.println(i);
             }
         }
-        System.out.println("test" + tableModel.getRowCount());
-        for (Funcionario c : colaborabores.getColaboradores()) {
+        
+        for (Funcionario c : colaborabores.pesquisaFuncionario(atributo)) {
             tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
         }
 

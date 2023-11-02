@@ -14,7 +14,7 @@ import view.ListarFuncionarioView;
 
 /**
  *
- * @author isaac
+ * @author isaack e Douglas 
  */
 public class ListarFuncionarioPresenter {
 
@@ -36,11 +36,11 @@ public class ListarFuncionarioPresenter {
     public void listarFuncionarios() {
         collectionFuncionario = FuncionarioCollection.getInstance();
         DefaultTableModel tableModel = (DefaultTableModel) view.getTblListaFunc().getModel();
-
+         
+        //APAGAR TODAS AS LINHAS
         if (tableModel.getRowCount() > 0) {
-            for (int i = 0; i < tableModel.getRowCount(); i++) {
+            while ( tableModel.getRowCount() != 0) {
                 tableModel.removeRow(0);
-                System.out.println(i);
             }
         }
 
