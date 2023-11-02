@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import model.Funcionario;
 import model.FuncionarioCollection;
 import view.InserirFuncionarioView;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author isaac
@@ -46,6 +46,10 @@ public class InserirFuncionarioPresenter{
                 colaborabores = FuncionarioCollection.getInstance();
                 colaborabores.adicionarFuncionario(funcionario);
                 limparFormulario();
+               JOptionPane.showMessageDialog(null,
+                       "Funcionario : " + nome + "\nCargo : " + cargo + "\nSalário : " + salario 
+                       ,"Cadastro completo",
+                       JOptionPane.INFORMATION_MESSAGE);
             }
         });
     }
@@ -55,4 +59,6 @@ public class InserirFuncionarioPresenter{
      view.getTxtCargo().setText("");
      view.getTxtSalarioBase().setText("");
      }
+    
+    
 }

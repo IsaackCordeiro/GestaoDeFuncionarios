@@ -29,7 +29,7 @@ public class ConsultarFuncionarioPresenter {
     public void listarFuncionarios(){
     colaborabores = FuncionarioCollection.getInstance();
     DefaultTableModel tableModel = (DefaultTableModel)view.getTbResultadoPesquisa().getModel();
-   
+  
     System.out.println("incio"+tableModel.getRowCount());
     if(tableModel.getRowCount() > 0){
         for (int i = 0; i <= tableModel.getRowCount()  ; i++) {
