@@ -10,7 +10,7 @@ import view.PrincipalView;
 
 /**
  *
- * @author isaac
+ * @author isaack e Douglas
  */
 public class PrincipalPresenter {
 

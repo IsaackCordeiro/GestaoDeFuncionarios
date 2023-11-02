@@ -8,7 +8,7 @@ import javax.swing.*;
 
 /**
  *
- * @author isaac
+ * @author isaack e Douglas 
  */
 public class InserirFuncionarioView extends JFrame{
     

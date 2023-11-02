@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author isaac
+ * @author isaack e Douglas
  */
 public class ConsultarFuncionarioView extends JFrame{
     private javax.swing.JButton btnBuscar;

@@ -8,7 +8,7 @@ import javax.swing.*;
 
 /**
  *
- * @author isaac
+ * @author isaack e Douglas
  */
 public class ListarFuncionarioView extends JFrame{
     private static ListarFuncionarioView instance;

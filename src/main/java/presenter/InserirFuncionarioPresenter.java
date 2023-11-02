@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author isaac
+ * @author isaack e Douglas
  */
 public class InserirFuncionarioPresenter {
 
