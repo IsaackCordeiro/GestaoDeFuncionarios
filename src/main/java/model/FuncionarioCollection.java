@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 /**
  *
- * @author isaac
+ * @author isaack e Douglas
  */
 public class FuncionarioCollection {
- private ArrayList<Funcionario> colaboradores= new ArrayList<>();
+ private ArrayList<Funcionario> colaboradores = new ArrayList<>();
  
  private static FuncionarioCollection instance;
 
@@ -31,7 +31,7 @@ public class FuncionarioCollection {
  public ArrayList<Funcionario> pesquisaFuncionario(String nomefuncionario){
      ArrayList<Funcionario> funcionariobuscado = new ArrayList<Funcionario>();
      for (Funcionario func : colaboradores) {
-         if(nomefuncionario.equals(func.getNome())){
+         if(nomefuncionario.toUpperCase().contains(func.getNome().toUpperCase())){
              funcionariobuscado.add(func);
          }
      }
