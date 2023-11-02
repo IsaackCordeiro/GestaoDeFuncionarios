@@ -39,17 +39,20 @@ public class InserirFuncionarioPresenter {
         view.getBtnSalvar().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String nome = view.getTxtNome().getText();
-                String cargo = view.getTxtCargo().getText();
-                double salario = Double.parseDouble(view.getTxtSalarioBase().getText());
-                funcionario = new Funcionario(nome, cargo, salario);
-                colaborabores = FuncionarioCollection.getInstance();
-                colaborabores.adicionarFuncionario(funcionario);
+                if(validaCampos()){
+                    String nome = view.getTxtNome().getText();
+                    String cargo = view.getTxtCargo().getText();
+                    double salario = Double.parseDouble(view.getTxtSalarioBase().getText());
+
+                    funcionario = new Funcionario(nome, cargo, salario);
+                    colaborabores = FuncionarioCollection.getInstance();
+                    colaborabores.adicionarFuncionario(funcionario);
+                }else{
+                    throw new IllegalArgumentException("Por favor, preencha todos os campos do formulário");
+                }
+
                 limparFormulario();
-                JOptionPane.showMessageDialog(null,
-                        "Funcionario : " + nome + "\nCargo : " + cargo + "\nSalário : " + salario,
-                         "Cadastro completo",
-                        JOptionPane.INFORMATION_MESSAGE);
+                
             }
         });
     }
@@ -59,5 +62,27 @@ public class InserirFuncionarioPresenter {
         view.getTxtCargo().setText("");
         view.getTxtSalarioBase().setText("");
     }
-
+    
+    private boolean validaCampos(){
+        if(view.getTxtNome().getText().isBlank()){
+            JOptionPane.showMessageDialog(view, "Por favor, insira o nome");
+            view.getTxtNome().requestFocus();
+            return false;
+        } else if(view.getTxtCargo().getText().isBlank()){
+            JOptionPane.showMessageDialog(view, "Por favor, insira o cargo");
+            view.getTxtCargo().requestFocus();
+            return false;
+        } else if(view.getTxtSalarioBase().getText().isBlank()){
+            JOptionPane.showMessageDialog(view, "Por favor, insira o salário");
+            view.getTxtSalarioBase().requestFocus();
+            return false;
+        } else {
+            JOptionPane.showMessageDialog(view,
+                        "Funcionario : " + view.getTxtNome().getText() + "\nCargo : " + view.getTxtCargo().getText() + "\nSalário : " + Double.parseDouble(view.getTxtSalarioBase().getText()),
+                         "Cadastro completo",
+                        JOptionPane.INFORMATION_MESSAGE);
+            return true;
+        }
+    }
+    
 }

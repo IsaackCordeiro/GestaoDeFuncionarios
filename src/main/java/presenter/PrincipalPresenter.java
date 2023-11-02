@@ -13,36 +13,37 @@ import view.PrincipalView;
  * @author isaac
  */
 public class PrincipalPresenter {
+
     private PrincipalView view;
-    
-    public PrincipalPresenter(){
+
+    public PrincipalPresenter() {
         this.view = new PrincipalView();
         view.setVisible(true);
-        
+
         configuraTela();
     }
-    
-    public void configuraTela(){
-        view.getBtnConsultar().addActionListener(new ActionListener(){
+
+    public void configuraTela() {
+        view.getBtnConsultar().addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 ConsultarFuncionarioPresenter consultarFuncionarioPresenter = new ConsultarFuncionarioPresenter();
             }
         });
-    
-        view.getBtnIncluir().addActionListener(new ActionListener(){
+
+        view.getBtnIncluir().addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
-                InserirFuncionarioPresenter inserirFuncionarioPresenter  = new InserirFuncionarioPresenter();
+            public void actionPerformed(ActionEvent e) {
+                InserirFuncionarioPresenter inserirFuncionarioPresenter = new InserirFuncionarioPresenter();
             }
         });
-        
-        view.getBtnVisualizar().addActionListener(new ActionListener(){
+
+        view.getBtnVisualizar().addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
-                ListarFuncionarioPresenter listarFuncionarioPresenter  = new ListarFuncionarioPresenter();
+            public void actionPerformed(ActionEvent e) {
+                ListarFuncionarioPresenter listarFuncionarioPresenter = new ListarFuncionarioPresenter();
             }
         });
     }
-      
+
 }
