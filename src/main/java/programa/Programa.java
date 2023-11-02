@@ -15,7 +15,7 @@ import presenter.PrincipalPresenter;
 public class Programa {
     public static void main(String[] args) {
         
-        System.out.println("Testando");
+        /*System.out.println("Testando");
         //
         Funcionario f1 = new Funcionario("douglas","estágiario",2000);
         Funcionario f2 = new Funcionario("thiago","CTO",200000);
@@ -33,7 +33,7 @@ public class Programa {
         func.pFuncionario();
         func.removerFuncionario(0);
         System.out.println("Test3");
-        func.pFuncionario();
+        func.pFuncionario();*/
         PrincipalPresenter principalPresenter = new PrincipalPresenter();
     }
 }
