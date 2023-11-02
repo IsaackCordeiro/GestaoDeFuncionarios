@@ -32,6 +32,7 @@ public class Teste extends javax.swing.JFrame {
         btnConsultar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cadastro de Funcionários");
 
         btnVisualizar.setText("Visualizar");
         btnVisualizar.setMaximumSize(new java.awt.Dimension(89, 27));

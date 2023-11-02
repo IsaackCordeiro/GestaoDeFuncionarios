@@ -31,13 +31,12 @@ public class ConsultarFuncionarioPresenter {
         String atributo = view.getTxtAtributoPesquisa().getText();
         DefaultTableModel tableModel = (DefaultTableModel) view.getTbResultadoPesquisa().getModel();
 
-        
-         if (tableModel.getRowCount() > 0) {
-            while ( tableModel.getRowCount() != 0) {
+        if (tableModel.getRowCount() > 0) {
+            while (tableModel.getRowCount() != 0) {
                 tableModel.removeRow(0);
             }
         }
-        
+
         for (Funcionario c : colaborabores.pesquisaFuncionario(atributo)) {
             tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
         }
