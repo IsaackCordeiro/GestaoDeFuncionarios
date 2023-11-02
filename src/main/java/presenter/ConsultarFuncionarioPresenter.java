@@ -30,17 +30,18 @@ public class ConsultarFuncionarioPresenter {
     collectionFuncionario = FuncionarioCollection.getInstance();
     DefaultTableModel tableModel = (DefaultTableModel)view.getTbResultadoPesquisa().getModel();
    
-   System.out.println("incio"+tableModel.getRowCount());
+    System.out.println("incio"+tableModel.getRowCount());
     if(tableModel.getRowCount() > 0){
-        for (int i = 0; i < tableModel.getRowCount()  ; i++) {
-            tableModel.removeRow(i);
+        for (int i = 0; i <= tableModel.getRowCount()  ; i++) {
+           tableModel.removeRow(0);
             System.out.println(i);
         }}
- System.out.println("test"+tableModel.getRowCount());
-for (Funcionario c : collectionFuncionario.getColaboradores()) {
+    System.out.println("test"+tableModel.getRowCount());
+    for (Funcionario c : collectionFuncionario.getColaboradores()) {
        tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
     }
-    }
+
+ }
      
      
      

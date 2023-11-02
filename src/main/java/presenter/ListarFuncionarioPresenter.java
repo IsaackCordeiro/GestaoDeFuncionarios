@@ -36,9 +36,16 @@ public class ListarFuncionarioPresenter{
     public void listarFuncionarios(){
     collectionFuncionario = FuncionarioCollection.getInstance();
     DefaultTableModel tableModel = (DefaultTableModel)view.getTblListaFunc().getModel();
+    
+    if(tableModel.getRowCount() > 0){
+        for (int i = 0; i <= tableModel.getRowCount()  ; i++) {
+           tableModel.removeRow(0);
+            System.out.println(i);
+        }}
+    
     for (Funcionario c : collectionFuncionario.getColaboradores()) {
        tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
-    }
+     }
     }
     public void configuraTela(){
         view.getBtnFechar().addActionListener(new ActionListener(){
