@@ -49,12 +49,9 @@ public class InserirFuncionarioPresenter {
                     funcionario = new Funcionario(nome, cargo, salario);
                     colaborabores = FuncionarioCollection.getInstance();
                     colaborabores.adicionarFuncionario(funcionario);
-                }else{
-                    throw new IllegalArgumentException("Por favor, preencha todos os campos do formulário");
-                }
-
-                limparFormulario();
-                
+                    
+                    limparFormulario();
+                } 
             }
         });
         

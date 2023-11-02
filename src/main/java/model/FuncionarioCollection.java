@@ -27,15 +27,35 @@ public class FuncionarioCollection {
     }
 
     public ArrayList<Funcionario> pesquisaFuncionario(String nomefuncionario) {
-        ArrayList<Funcionario> funcionariosEncondtrados = new ArrayList<>();
+        ArrayList<Funcionario> funcionariosEncontrados = new ArrayList<>();
         for (Funcionario func : colaboradores) {
             if (func.getNome().toUpperCase().contains(nomefuncionario.toUpperCase())) {
-                funcionariosEncondtrados.add(func);
+                funcionariosEncontrados.add(func);
             }
         }
-        return funcionariosEncondtrados;
+        return funcionariosEncontrados;
     }
 
+    public ArrayList<Funcionario> pesquisaFuncionarioCargo(String nomeCargo) {
+        ArrayList<Funcionario> funcionariosEncontrados = new ArrayList<>();
+        for (Funcionario func : colaboradores) {
+            if (func.getCargo().toUpperCase().contains(nomeCargo.toUpperCase())) {
+                funcionariosEncontrados.add(func);
+            }
+        }
+        return funcionariosEncontrados;
+    }
+    
+    public ArrayList<Funcionario> pesquisaFuncionarioSalario(double valorSalario) {
+        ArrayList<Funcionario> funcionariosEncontrados = new ArrayList<>();
+        for (Funcionario func : colaboradores) {
+            if (func.getSalarioBase() == valorSalario) {
+                funcionariosEncontrados.add(func);
+            }
+        }
+        return funcionariosEncontrados;
+    }
+    
     public void adicionarFuncionario(Funcionario funcionario) {
         colaboradores.add(funcionario);
     }
