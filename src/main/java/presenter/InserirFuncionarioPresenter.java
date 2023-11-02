@@ -10,55 +10,54 @@ import model.Funcionario;
 import model.FuncionarioCollection;
 import view.InserirFuncionarioView;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author isaac
  */
-public class InserirFuncionarioPresenter{
-    private InserirFuncionarioView view ;
+public class InserirFuncionarioPresenter {
+
+    private InserirFuncionarioView view;
     private FuncionarioCollection colaborabores;
-    private Funcionario funcionario; 
-    
-    
-    public InserirFuncionarioPresenter(){
+    private Funcionario funcionario;
+
+    public InserirFuncionarioPresenter() {
         this.view = InserirFuncionarioView.getInstace();
         view.setVisible(true);
         configuraTela();
     }
-    
 
-    public void configuraTela(){
-        
-        view.getBtnCancelar().addActionListener(new ActionListener(){
+    public void configuraTela() {
+
+        view.getBtnCancelar().addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 view.dispose();
             }
         });
-        
-        view.getBtnSalvar().addActionListener(new ActionListener(){
+
+        view.getBtnSalvar().addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 String nome = view.getTxtNome().getText();
                 String cargo = view.getTxtCargo().getText();
                 double salario = Double.parseDouble(view.getTxtSalarioBase().getText());
-                funcionario = new Funcionario(nome,cargo,salario);
+                funcionario = new Funcionario(nome, cargo, salario);
                 colaborabores = FuncionarioCollection.getInstance();
                 colaborabores.adicionarFuncionario(funcionario);
                 limparFormulario();
-               JOptionPane.showMessageDialog(null,
-                       "Funcionario : " + nome + "\nCargo : " + cargo + "\nSalário : " + salario 
-                       ,"Cadastro completo",
-                       JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null,
+                        "Funcionario : " + nome + "\nCargo : " + cargo + "\nSalário : " + salario,
+                         "Cadastro completo",
+                        JOptionPane.INFORMATION_MESSAGE);
             }
         });
     }
-    
-    private void limparFormulario(){
-     view.getTxtNome().setText("");
-     view.getTxtCargo().setText("");
-     view.getTxtSalarioBase().setText("");
-     }
-    
-    
+
+    private void limparFormulario() {
+        view.getTxtNome().setText("");
+        view.getTxtCargo().setText("");
+        view.getTxtSalarioBase().setText("");
+    }
+
 }
