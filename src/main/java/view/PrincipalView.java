@@ -8,7 +8,7 @@ import javax.swing.*;
 
 /**
  *
- * @author isaac
+ * @author isaack e Douglas 
  */
 public class PrincipalView extends JFrame{
     private javax.swing.JButton btnConsultar;
