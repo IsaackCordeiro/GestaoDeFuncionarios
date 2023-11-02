@@ -32,7 +32,7 @@ public class ConsultarFuncionarioPresenter {
 
         System.out.println("incio" + tableModel.getRowCount());
         if (tableModel.getRowCount() > 0) {
-            for (int i = 0; i <= tableModel.getRowCount(); i++) {
+            for (int i = 0; i < tableModel.getRowCount(); i++) {
                 tableModel.removeRow(0);
                 System.out.println(i);
             }
