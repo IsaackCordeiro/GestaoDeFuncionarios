@@ -17,7 +17,7 @@ import view.ConsultarFuncionarioView;
  */
 public class ConsultarFuncionarioPresenter {
     private ConsultarFuncionarioView view;
-    private FuncionarioCollection collectionFuncionario ;
+    private FuncionarioCollection colaborabores ;
     
     public ConsultarFuncionarioPresenter(){
         this.view = ConsultarFuncionarioView.getInstance();
@@ -27,7 +27,7 @@ public class ConsultarFuncionarioPresenter {
  
      
     public void listarFuncionarios(){
-    collectionFuncionario = FuncionarioCollection.getInstance();
+    colaborabores = FuncionarioCollection.getInstance();
     DefaultTableModel tableModel = (DefaultTableModel)view.getTbResultadoPesquisa().getModel();
    
     System.out.println("incio"+tableModel.getRowCount());
@@ -37,7 +37,7 @@ public class ConsultarFuncionarioPresenter {
             System.out.println(i);
         }}
     System.out.println("test"+tableModel.getRowCount());
-    for (Funcionario c : collectionFuncionario.getColaboradores()) {
+    for (Funcionario c : colaborabores.getColaboradores()) {
        tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
     }
 

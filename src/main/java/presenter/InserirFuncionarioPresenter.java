@@ -6,6 +6,8 @@ package presenter;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import model.Funcionario;
+import model.FuncionarioCollection;
 import view.InserirFuncionarioView;
 
 /**
@@ -14,12 +16,17 @@ import view.InserirFuncionarioView;
  */
 public class InserirFuncionarioPresenter{
     private InserirFuncionarioView view ;
+    private FuncionarioCollection colaborabores;
+    private Funcionario funcionario; 
+    
+    
     public InserirFuncionarioPresenter(){
         this.view = InserirFuncionarioView.getInstace();
         view.setVisible(true);
         configuraTela();
     }
     
+
     public void configuraTela(){
         
         view.getBtnCancelar().addActionListener(new ActionListener(){
@@ -28,5 +35,24 @@ public class InserirFuncionarioPresenter{
                 view.dispose();
             }
         });
+        
+        view.getBtnSalvar().addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                String nome = view.getTxtNome().getText();
+                String cargo = view.getTxtCargo().getText();
+                double salario = Double.parseDouble(view.getTxtSalarioBase().getText());
+                funcionario = new Funcionario(nome,cargo,salario);
+                colaborabores = FuncionarioCollection.getInstance();
+                colaborabores.adicionarFuncionario(funcionario);
+                limparFormulario();
+            }
+        });
     }
+    
+    private void limparFormulario(){
+     view.getTxtNome().setText("");
+     view.getTxtCargo().setText("");
+     view.getTxtSalarioBase().setText("");
+     }
 }

@@ -132,4 +132,6 @@ public class InserirFuncionarioView extends JFrame{
         pack();
         setLocationRelativeTo(null);
     }
+    
+    
 }
