@@ -6,6 +6,8 @@ package presenter;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import model.Funcionario;
 import model.FuncionarioCollection;
 import view.InserirFuncionarioView;
@@ -54,6 +56,24 @@ public class InserirFuncionarioPresenter {
                 limparFormulario();
                 
             }
+        });
+        
+        view.getTxtSalarioBase().addKeyListener(new KeyListener(){
+            @Override
+            public void keyTyped(KeyEvent e) {
+                // Este método é chamado quando uma tecla é digitada.
+                char c = e.getKeyChar();
+                if (!Character.isDigit(c)) {
+                    // Se o caractere não for um dígito, bloqueie a entrada.
+                    e.consume();
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {}
+
+            @Override
+            public void keyReleased(KeyEvent e) {}
         });
     }
 
