@@ -10,11 +10,25 @@ import java.util.ArrayList;
  * @author isaac
  */
 public class FuncionarioCollection {
- private ArrayList<Funcionario> colaboradores= new ArrayList<>();;
+ private ArrayList<Funcionario> colaboradores= new ArrayList<>();
+ 
+ private static FuncionarioCollection instance;
+
+    public static FuncionarioCollection getInstance() {
+        if(instance == null){
+           instance = new FuncionarioCollection();
+        }
+        return instance;
+    }
+ 
+ 
+    private FuncionarioCollection() {
+    }
+ 
 
 
  
- ArrayList<Funcionario> pesquisaFuncionario(String nomefuncionario){
+ public ArrayList<Funcionario> pesquisaFuncionario(String nomefuncionario){
      ArrayList<Funcionario> funcionariobuscado = new ArrayList<Funcionario>();
      for (Funcionario func : colaboradores) {
          if(nomefuncionario.equals(func.getNome())){
@@ -24,15 +38,15 @@ public class FuncionarioCollection {
       return funcionariobuscado;
  }
  
- void adicionarFuncionario(Funcionario funcionario){
+ public void adicionarFuncionario(Funcionario funcionario){
      colaboradores.add(funcionario);
  }
 
- void editarFuncionario(int index,Funcionario func){
+ public void editarFuncionario(int index,Funcionario func){
      colaboradores.set(index, func);
  }
  
- void removerFuncionario(int index){
+ public void removerFuncionario(int index){
      colaboradores.remove(index);
  }
  
@@ -40,7 +54,7 @@ public class FuncionarioCollection {
  public ArrayList<Funcionario> getColaboradores() {
         return colaboradores;
     }
-void pFuncionario(){
+public void pFuncionario(){
      ArrayList<Funcionario> funcionariobuscado = new ArrayList<Funcionario>();
      for (Funcionario func : colaboradores) {
          System.out.println(func.getNome());

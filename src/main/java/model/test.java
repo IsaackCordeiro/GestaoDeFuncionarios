@@ -16,7 +16,7 @@ public class test {
         Funcionario f2 = new Funcionario("thiago","CTO",200000);
         Funcionario f3 = new Funcionario("isaack","Senior",20000);
         //
-        FuncionarioCollection func = new FuncionarioCollection();
+        FuncionarioCollection func = FuncionarioCollection.getInstance();
         
         func.adicionarFuncionario(f1);
         func.adicionarFuncionario(f2);

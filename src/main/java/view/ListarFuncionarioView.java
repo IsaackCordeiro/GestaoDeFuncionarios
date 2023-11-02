@@ -102,6 +102,10 @@ public class ListarFuncionarioView extends JFrame{
     public JTable getTblListaFunc() {
         return tblListaFunc;
     }
+
+    public void setTblListaFunc(JTable tblListaFunc) {
+        this.tblListaFunc = tblListaFunc;
+    }
     
     
 }
