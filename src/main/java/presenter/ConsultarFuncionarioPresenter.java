@@ -25,7 +25,7 @@ public class ConsultarFuncionarioPresenter {
     private VisualizarFuncionarioView visualizarFuncionarioView;
     private FuncionarioCollection colaborabores;
     private ArrayList<Funcionario> funcionarioEncontrados;
-    
+
     public ConsultarFuncionarioPresenter() {
         this.view = ConsultarFuncionarioView.getInstance();
         view.setVisible(true);
@@ -43,7 +43,7 @@ public class ConsultarFuncionarioPresenter {
                 tableModel.removeRow(0);
             }
         }
-        
+
         funcionarioEncontrados = colaborabores.pesquisaFuncionario(atributo);
         for (Funcionario c : funcionarioEncontrados) {
             tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
@@ -62,7 +62,7 @@ public class ConsultarFuncionarioPresenter {
                         tableModel.removeRow(0);
                     }
                 }
-                
+
                 view.dispose();
             }
         });
@@ -89,14 +89,14 @@ public class ConsultarFuncionarioPresenter {
             public void actionPerformed(ActionEvent e) {
                 visualizarFuncionarioView = VisualizarFuncionarioView.getInstance();
                 visualizarFuncionarioView.setVisible(true);
-                
+
                 int posFuncionarioSelecionado = view.getTbResultadoPesquisa().getSelectedRow();
                 Funcionario funcionarioSelecionado = funcionarioEncontrados.get(posFuncionarioSelecionado);
-                
+
                 visualizarFuncionarioView.getTxtNome().setText(funcionarioSelecionado.getNome());
                 visualizarFuncionarioView.getTxtCargo().setText(funcionarioSelecionado.getCargo());
                 visualizarFuncionarioView.getTxtSalarioBase().setText(Double.toString(funcionarioSelecionado.getSalarioBase()));
-                
+
                 visualizarFuncionarioView.getBtnFechar().addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {

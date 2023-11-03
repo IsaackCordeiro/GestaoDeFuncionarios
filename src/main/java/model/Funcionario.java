@@ -9,10 +9,11 @@ package model;
  * @author isaac
  */
 public class Funcionario {
-    private String nome ;
+
+    private String nome;
     private String cargo;
     private double salarioBase;
-    
+
     public Funcionario(String nome, String cargo, double salarioBase) {
         this.nome = nome;
         this.cargo = cargo;
@@ -23,23 +24,12 @@ public class Funcionario {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getCargo() {
         return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
     }
 
     public double getSalarioBase() {
         return salarioBase;
     }
 
-    public void setSalarioBase(double salarioBase) {
-        this.salarioBase = salarioBase;
-    }  
 }
