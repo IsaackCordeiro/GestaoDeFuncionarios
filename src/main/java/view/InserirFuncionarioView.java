@@ -42,6 +42,12 @@ public class InserirFuncionarioView extends JFrame{
     }
     
     private static InserirFuncionarioView instance;
+
+    public static void deleteView() {
+        InserirFuncionarioView.instance = null;
+    }
+    
+    
     
     public static InserirFuncionarioView getInstace(){
         if(instance == null){

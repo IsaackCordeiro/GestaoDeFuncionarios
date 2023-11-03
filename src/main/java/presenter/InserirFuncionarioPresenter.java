@@ -34,14 +34,17 @@ public class InserirFuncionarioPresenter {
         view.getBtnCancelar().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                view.dispose();
+                if (view != null) {
+                    view.dispose();
+                }
+                view.deleteView();
             }
         });
 
         view.getBtnSalvar().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(validaCampos()){
+                if (validaCampos()) {
                     String nome = view.getTxtNome().getText();
                     String cargo = view.getTxtCargo().getText();
                     double salario = Double.parseDouble(view.getTxtSalarioBase().getText());
@@ -49,13 +52,13 @@ public class InserirFuncionarioPresenter {
                     funcionario = new Funcionario(nome, cargo, salario);
                     colaborabores = FuncionarioCollection.getInstance();
                     colaborabores.adicionarFuncionario(funcionario);
-                    
+
                     limparFormulario();
-                } 
+                }
             }
         });
-        
-        view.getTxtSalarioBase().addKeyListener(new KeyListener(){
+
+        view.getTxtSalarioBase().addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
                 // Este método é chamado quando uma tecla é digitada.
@@ -67,10 +70,12 @@ public class InserirFuncionarioPresenter {
             }
 
             @Override
-            public void keyPressed(KeyEvent e) {}
+            public void keyPressed(KeyEvent e) {
+            }
 
             @Override
-            public void keyReleased(KeyEvent e) {}
+            public void keyReleased(KeyEvent e) {
+            }
         });
     }
 
@@ -79,27 +84,27 @@ public class InserirFuncionarioPresenter {
         view.getTxtCargo().setText("");
         view.getTxtSalarioBase().setText("");
     }
-    
-    private boolean validaCampos(){
-        if(view.getTxtNome().getText().isBlank()){
+
+    private boolean validaCampos() {
+        if (view.getTxtNome().getText().isBlank()) {
             JOptionPane.showMessageDialog(view, "Por favor, insira o nome");
             view.getTxtNome().requestFocus();
             return false;
-        } else if(view.getTxtCargo().getText().isBlank()){
+        } else if (view.getTxtCargo().getText().isBlank()) {
             JOptionPane.showMessageDialog(view, "Por favor, insira o cargo");
             view.getTxtCargo().requestFocus();
             return false;
-        } else if(view.getTxtSalarioBase().getText().isBlank()){
+        } else if (view.getTxtSalarioBase().getText().isBlank()) {
             JOptionPane.showMessageDialog(view, "Por favor, insira o salário");
             view.getTxtSalarioBase().requestFocus();
             return false;
         } else {
             JOptionPane.showMessageDialog(view,
-                        "Funcionario : " + view.getTxtNome().getText() + "\nCargo : " + view.getTxtCargo().getText() + "\nSalário : " + Double.parseDouble(view.getTxtSalarioBase().getText()),
-                         "Cadastro completo",
-                        JOptionPane.INFORMATION_MESSAGE);
+                    "Funcionario : " + view.getTxtNome().getText() + "\nCargo : " + view.getTxtCargo().getText() + "\nSalário : " + Double.parseDouble(view.getTxtSalarioBase().getText()),
+                    "Cadastro completo",
+                    JOptionPane.INFORMATION_MESSAGE);
             return true;
         }
     }
-    
+
 }
