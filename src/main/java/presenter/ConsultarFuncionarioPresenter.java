@@ -30,39 +30,17 @@ public class ConsultarFuncionarioPresenter {
         colaborabores = FuncionarioCollection.getInstance();
         String atributo = view.getTxtAtributoPesquisa().getText();
         DefaultTableModel tableModel = (DefaultTableModel) view.getTbResultadoPesquisa().getModel();
-        int retornoComboBox = view.getCbbParametroPesquisa().getSelectedIndex();
 
-        if (retornoComboBox == 0) {
-            if (tableModel.getRowCount() > 0) {
-                while (tableModel.getRowCount() != 0) {
-                    tableModel.removeRow(0);
-                }
-            }
-
-            for (Funcionario c : colaborabores.pesquisaFuncionario(atributo)) {
-                tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
-            }
-        } else if (retornoComboBox == 1){
-            if (tableModel.getRowCount() > 0) {
-                while (tableModel.getRowCount() != 0) {
-                    tableModel.removeRow(0);
-                }
-            }
-
-            for (Funcionario c : colaborabores.pesquisaFuncionarioCargo(atributo)) {
-                tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
-            }
-        } else {
-            if (tableModel.getRowCount() > 0) {
-                while (tableModel.getRowCount() != 0) {
-                    tableModel.removeRow(0);
-                }
-            }
-
-            for (Funcionario c : colaborabores.pesquisaFuncionarioSalario(Double.parseDouble(atributo))) {
-                tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
+        if (tableModel.getRowCount() > 0) {
+            while (tableModel.getRowCount() != 0) {
+                tableModel.removeRow(0);
             }
         }
+
+        for (Funcionario c : colaborabores.pesquisaFuncionario(atributo)) {
+            tableModel.addRow(new Object[]{c.getNome(), c.getCargo(), c.getSalarioBase()});
+        }
+
     }
 
     public void configuraTela() {
