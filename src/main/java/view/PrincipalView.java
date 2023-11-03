@@ -30,8 +30,10 @@ public class PrincipalView extends JFrame{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Funcionários");
+
         btnVisualizar.setText("Visualizar");
         btnVisualizar.setMaximumSize(new java.awt.Dimension(89, 27));
+        btnVisualizar.setMinimumSize(new java.awt.Dimension(89, 23));
         btnVisualizar.setPreferredSize(new java.awt.Dimension(89, 27));
 
         lblBemVindo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -39,6 +41,7 @@ public class PrincipalView extends JFrame{
 
         btnIncluir.setText("Incluir");
         btnIncluir.setMaximumSize(new java.awt.Dimension(89, 27));
+        btnIncluir.setMinimumSize(new java.awt.Dimension(89, 23));
         btnIncluir.setPreferredSize(new java.awt.Dimension(89, 27));
 
         btnConsultar.setText("Consultar");
@@ -49,17 +52,17 @@ public class PrincipalView extends JFrame{
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(84, Short.MAX_VALUE)
                 .addComponent(lblBemVindo)
                 .addGap(85, 85, 85))
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(btnIncluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(btnVisualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addComponent(btnIncluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnVisualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

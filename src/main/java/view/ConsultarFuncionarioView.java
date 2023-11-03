@@ -87,7 +87,6 @@ public class ConsultarFuncionarioView extends JFrame{
         jScrollPane1.setViewportView(tbResultadoPesquisa);
 
         btnFechar.setText("Fechar");
-       
 
         lblBuscaFuncionario.setText("Funcionario :");
 
@@ -130,9 +129,7 @@ public class ConsultarFuncionarioView extends JFrame{
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>                        
-// </editor-fold>                        
-// </editor-fold>                        
+    }// </editor-fold>                   
 
     public JButton getBtnBuscar() {
         return btnBuscar;
