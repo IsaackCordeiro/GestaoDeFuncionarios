@@ -29,10 +29,10 @@ public class Listar extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblListaFunc = new javax.swing.JTable();
         btnFechar = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Listagem de Funcionários");
+        setResizable(false);
 
         tblListaFunc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -61,8 +61,6 @@ public class Listar extends javax.swing.JFrame {
 
         btnFechar.setText("Fechar");
 
-        btnEditar.setText("Editar");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -73,8 +71,6 @@ public class Listar extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnEditar)
-                .addGap(18, 18, 18)
                 .addComponent(btnFechar)
                 .addGap(25, 25, 25))
         );
@@ -84,9 +80,7 @@ public class Listar extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEditar)
-                    .addComponent(btnFechar))
+                .addComponent(btnFechar)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -130,7 +124,6 @@ public class Listar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnFechar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblListaFunc;
